@@ -8,14 +8,13 @@ function api_get_product($request) {
             responseError(ERROR_ACESS, 401)
         );
     }
-
     
     $args = array(
         'post_type'   => 'product',
+        'order' => 'ASC'
     );
 
     $posts = get_posts( $args );
-
     $response = [];
 
     foreach ($posts as $key => $post) {
@@ -29,12 +28,12 @@ function api_get_product($request) {
                 "ID" => get_field( "image", $post->ID )["ID"],
                 "url" => get_field( "image", $post->ID )["url"],
                 "sizes" => [
-                    get_field( "image", $post->ID )["sizes"]["thumbnail"],
-                    get_field( "image", $post->ID )["sizes"]["medium"],
-                    get_field( "image", $post->ID )["sizes"]["medium_large"],
-                    get_field( "image", $post->ID )["sizes"]["large"],
-                    get_field( "image", $post->ID )["sizes"]["1536x1536"],
-                    get_field( "image", $post->ID )["sizes"]["2048x2048"]
+                    "thumbnail" => get_field( "image", $post->ID )["sizes"]["thumbnail"],
+                    "medium" => get_field( "image", $post->ID )["sizes"]["medium"],
+                    "medium_large" => get_field( "image", $post->ID )["sizes"]["medium_large"],
+                    "large" => get_field( "image", $post->ID )["sizes"]["large"],
+                    "xl" => get_field( "image", $post->ID )["sizes"]["1536x1536"],
+                    "xxl" => get_field( "image", $post->ID )["sizes"]["2048x2048"]
                 ]
             ]
         ];

@@ -15,7 +15,7 @@ function create_custom_post_type_product() {
         'title',        // Post title
         // 'editor',       // Post content
         // 'excerpt',      // Allows short description
-        // 'author',       // Allows showing and choosing author
+        'author',       // Allows showing and choosing author
         // 'thumbnail',    // Allows feature images
         // 'comments',     // Enables comments
         // 'trackbacks',   // Supports trackbacks
@@ -28,10 +28,9 @@ function create_custom_post_type_product() {
      */
     $args = array(
         'labels'              => $labels,
-        'description'         => 'Adicione nessa postagem todos os produtos necessários',       // Description
         'supports'            => $supports,
+        'description'         => 'Adicione nessa postagem todos os produtos necessários',       // Description
         'taxonomies'          => array( 'category', 'post_tag' ),                               // Allowed taxonomies
-        'rewrite'             => array('slug' => 'produto', 'with_front' => true),
         'capability_type'     => 'post',                                                        // Allows read, edit, delete like “Post”
         'hierarchical'        => false,                                                         // Allows hierarchical categorization, if set to false, the Custom Post Type will behave like Post, else it will behave like Page
         'public'              => true,                                                          // Makes the post type public
@@ -45,6 +44,9 @@ function create_custom_post_type_product() {
         'has_archive'         => true,                                                          // Enables post type archive (by month, date, or year)
         'exclude_from_search' => false,                                                         // Excludes posts of this type in the front-end search result page if set to true, include them if set to false
         'publicly_queryable'  => true,                                                          // Allows queries to be performed on the front-end part if set to true
+        'menu_icon'           => 'dashicons-cart',
+        'rewrite'             => array('slug' => 'produto', 'with_front' => true),
+
     );
 
     register_post_type('product', $args); //Crie um tipo de postagem com o slug como 'produto' e argumentos em $args.
