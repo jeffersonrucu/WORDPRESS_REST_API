@@ -15,7 +15,7 @@ function create_custom_post_type_product() {
         'title',        // Post title
         // 'editor',       // Post content
         // 'excerpt',      // Allows short description
-        'author',       // Allows showing and choosing author
+        // 'author',       // Allows showing and choosing author
         // 'thumbnail',    // Allows feature images
         // 'comments',     // Enables comments
         // 'trackbacks',   // Supports trackbacks

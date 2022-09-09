@@ -1,6 +1,6 @@
 <?php
 
-function api_get_product($request) {
+function api_product_get($request) {
     $validate = validateToken(wp_get_current_user());
 
     if (!$validate) {
