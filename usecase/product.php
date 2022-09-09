@@ -22,6 +22,8 @@ function api_get_product($request) {
         $response[] = [
             "ID" => $post->ID,
             "post_title" => $post->post_title,
+
+            // RETORNO DOS CAMPOS DO ACF PLUGIN
             "price" => get_field( "price", $post->ID ),
             "image" => [
                 "ID" => get_field( "image", $post->ID )["ID"],
