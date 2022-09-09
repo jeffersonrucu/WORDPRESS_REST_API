@@ -13,17 +13,17 @@ function create_custom_post_type_product() {
      */
     $supports = array(
         'title',        // Post title
-        'editor',       // Post content
-        'excerpt',      // Allows short description
-        'author',       // Allows showing and choosing author
-        'thumbnail',    // Allows feature images
-        'comments',     // Enables comments
-        'trackbacks',   // Supports trackbacks
-        'revisions',    // Shows autosaved version of the posts
+        // 'editor',       // Post content
+        // 'excerpt',      // Allows short description
+        // 'author',       // Allows showing and choosing author
+        // 'thumbnail',    // Allows feature images
+        // 'comments',     // Enables comments
+        // 'trackbacks',   // Supports trackbacks
+        // 'revisions',    // Shows autosaved version of the posts
         'custom-fields' // Supports by custom fields
     );
 
-    /*
+    /*  
      * O parâmetro $args contém parâmetros importantes para o tipo de postagem personalizado
      */
     $args = array(

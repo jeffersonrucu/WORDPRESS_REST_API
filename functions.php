@@ -6,5 +6,13 @@ $template_directory = get_template_directory();
 require_once($template_directory . "/custom-post-type/product.php");
 require_once($template_directory . "/custom-post-type/transacao.php");
 
-// Endpoints
-require_once($template_directory . "/endpoints/user-post.php");
+// Utils
+require_once($template_directory . "/utils/util.php");
+
+// Response
+require_once($template_directory . "/response/error.php");
+
+// Routes
+require_once($template_directory . "/routes/route.php");
+
+add_action('jwt_auth_expire', 'expire_token');
