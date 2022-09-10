@@ -8,6 +8,7 @@ require_once($template_directory . "/custom-post-type/product.php");
 // Utils
 require_once($template_directory . "/utils/util.php");
 require_once($template_directory . "/utils/config.php");
+require_once($template_directory . "/utils/cors.php");
 
 // Response
 require_once($template_directory . "/response/error.php");
